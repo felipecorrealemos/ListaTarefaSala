@@ -1,4 +1,6 @@
 ﻿
+using ListaTarefaSala.Models;
+
 bool continuar = true;
 
 while (continuar)
@@ -21,6 +23,8 @@ while (continuar)
         Console.WriteLine("Digite a descricao da tarefa:");
         string descricao = Console.ReadLine();
 
+        Tarefa tarefa = new Tarefa();
+        tarefa.CadastrarTarefa(titulo,descricao);
 
 
 
