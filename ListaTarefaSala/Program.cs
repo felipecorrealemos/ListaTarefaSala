@@ -26,7 +26,7 @@ while (continuar)
         Tarefa tarefa = new Tarefa();
         tarefa.CadastrarTarefa(titulo,descricao);
 
-
-
     }
+
+    
 }
