@@ -3,10 +3,11 @@ using ListaTarefaSala.Models;
 
 bool continuar = true;
 Tarefa tarefa = new Tarefa();
-tarefa.CarregarDoJson();
+
 
 while (continuar)
 {
+    tarefa.CarregarDoJson();
     Console.Clear();
     Console.WriteLine("== Sistema de tarefas - Turma 3B ==");
     Console.WriteLine("1 - Cadastrar tarefa");
@@ -26,8 +27,8 @@ while (continuar)
         Console.WriteLine("Digite a descricao da tarefa:");
         string descricao = Console.ReadLine();
 
-        Tarefa novaTarefa = new Tarefa();
-        novaTarefa.CadastrarTarefa(titulo, descricao);
+        //Tarefa novaTarefa = new Tarefa();
+        tarefa.CadastrarTarefa(titulo, descricao);
 
     }
 
@@ -46,6 +47,6 @@ while (continuar)
     else if(opcao == "4")
     {
         //Remover tarefa
-
+        tarefa.RemoverTarefa(1);
     }
 }
