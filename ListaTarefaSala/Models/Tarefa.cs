@@ -78,5 +78,24 @@ public class Tarefa
         }
     }
 
+    public void ConcluirTarefa(int numero)
+    {
+        if (numero == 1)
+        {
+
+        }
+
+        else if (numero == 2)
+        {
+
+        }
+
+        else if (numero == 3)
+        {
+
+        }
+    }
+      
+
 }
 
