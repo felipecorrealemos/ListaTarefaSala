@@ -36,7 +36,7 @@ public class Tarefa
             Console.WriteLine("");
         }
 
-        else if (tarefa2 != null && tarefa2.Titulo == "")
+        else if (tarefa2 == null)
         {
             string json = JsonSerializer.Serialize(novaTarefa, options);
             File.WriteAllText(caminhoTarefa2, json);
@@ -72,6 +72,8 @@ public class Tarefa
             }
             Console.WriteLine("Status: " + status);
         }
+
+        Console.WriteLine();
 
         if (tarefa2 == null)
         {
@@ -162,7 +164,11 @@ public class Tarefa
 
         else if (numero == 2)
         {
+            string json = JsonSerializer.Serialize(new Tarefa(), options);
+            File.WriteAllText(caminhoTarefa2, json);
 
+            Console.WriteLine("Tarefa 2 removida com sucesso.");
+            Console.ReadLine();
         }
 
         else if (numero == 3)
