@@ -1,7 +1,6 @@
 ﻿namespace ListaTarefaSala.Models;
 
 using System.Text.Json;
-
 public class Tarefa
 {
     public string Titulo = "";

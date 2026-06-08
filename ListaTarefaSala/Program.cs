@@ -5,7 +5,6 @@ bool continuar = true;
 Tarefa tarefa = new Tarefa();
 tarefa.CarregarDoJson();
 
-
 while (continuar)
 {
     Console.Clear();
@@ -35,9 +34,7 @@ while (continuar)
     else if (opcao == "2")
     {
         //Listagem de tarefa
-
         tarefa.ListarTarefas();
-
     }
 
     else if (opcao == "3")
