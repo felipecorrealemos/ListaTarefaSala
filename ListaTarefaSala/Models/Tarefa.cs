@@ -28,27 +28,29 @@ public class Tarefa
         novaTarefa.Descricao = descricao;
         novaTarefa.Concluida = false;
 
-        if (tarefa1 == null)
+        if (tarefa1 == null || tarefa1.Titulo == "")
         {
             string json = JsonSerializer.Serialize(novaTarefa, options);
             File.WriteAllText(caminhoTarefa1, json);
 
-            Console.WriteLine("");
+            Console.WriteLine("Tarefa 1 cadastrada com sucesso.");
+            Console.ReadLine();
         }
 
-        else if (tarefa2 == null)
+        else if (tarefa2 == null || tarefa2.Titulo == "")
         {
             string json = JsonSerializer.Serialize(novaTarefa, options);
             File.WriteAllText(caminhoTarefa2, json);
 
-            Console.WriteLine("");
+            Console.WriteLine("Tarefa 2 cadastrada com sucesso.");
+            Console.ReadLine();
         }
 
     }
 
     public void ListarTarefas()
     {
-        if (tarefa1 == null)
+        if (tarefa1 == null || tarefa1.Titulo == "")
         {
             Console.WriteLine("Tarefa1: vazia");
             Console.WriteLine();
@@ -75,7 +77,7 @@ public class Tarefa
 
         Console.WriteLine();
 
-        if (tarefa2 == null)
+        if (tarefa2 == null || tarefa2.Titulo == "")
         {
             Console.WriteLine("Tarefa2: vazia");
             Console.WriteLine();
@@ -142,7 +144,12 @@ public class Tarefa
 
         else if (numero == 2)
         {
+            tarefa2.Concluida = true;
+            string json = JsonSerializer.Serialize(tarefa2, options);
+            File.WriteAllText(caminhoTarefa2, json);
 
+            Console.WriteLine("Tarefa 2 marcada como concluida.");
+            Console.ReadLine();
         }
 
         else if (numero == 3)
