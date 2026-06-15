@@ -19,8 +19,6 @@ public class Tarefa
         IncludeFields = true,
     };
 
-    //Tarefa tarefa1 = new Tarefa();
-
     public void CadastrarTarefa(string titulo, string descricao)
     {
         Tarefa novaTarefa = new Tarefa();
