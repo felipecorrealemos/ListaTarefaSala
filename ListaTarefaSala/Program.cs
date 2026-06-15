@@ -41,14 +41,22 @@ while (continuar)
     else if (opcao == "3")
     {
         //concluir tarefa
-       
-        tarefa.ConcluirTarefa(1);
+        Console.WriteLine("Digite a tarefa a ser concluida");
+        int numero = int.Parse(Console.ReadLine());
+        tarefa.ConcluirTarefa(numero);
     }
 
     else if(opcao == "4")
     {
         //Remover tarefa
-       
-        tarefa.RemoverTarefa(1);
+        Console.WriteLine("Digite a tarefa a ser removida");
+        int numero = int.Parse(Console.ReadLine());
+        tarefa.RemoverTarefa(numero);
+    }
+
+    else if (opcao == "0")
+    {
+        continuar = false;
+        Console.WriteLine("Programa encerrado.");
     }
 }
